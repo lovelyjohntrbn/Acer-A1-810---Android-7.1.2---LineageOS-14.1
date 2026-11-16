@@ -1,26 +1,26 @@
-# Experimentální obnova na testovaném Acer Iconia A1-810
+# Experimental recovery for the tested Acer Iconia A1-810
 
-Zatím **není připraven veřejný univerzální instalační balíček**. Následující postup popisuje přípravu obnovy obrazu boot a system pořízeného ze stejného tabletu. Záloha zatím nebyla ověřena skutečným obnovovacím flashem a nevíme, zda bude fungovat na jiném kusu zařízení.
+**No public, portable installation package is available yet.** The following describes preparing to restore boot and system images captured from the same tablet. This backup has not yet been tested by flashing it back, and it is not known to work on other devices.
 
-## Co je potřeba
+## Requirements
 
-- Acer Iconia A1-810, dostatečně nabitý, spolehlivý USB kabel, Windows, funkční ovladač MediaTek VCOM a SP Flash Tool.
-- Vlastní ověřenou zálohu původního firmwaru a individuálních dat konkrétního zařízení a ověřený postup návratu. NVRAM a další individuální oddíly nikdy nepřebírejte z jiného tabletu.
-- Odpovídající scatter, `boot.img` a `system.img` pro daný konkrétní tablet; před použitím ověřte jejich SHA-256 proti spolehlivému seznamu a porovnejte rozložení oddílů s daným zařízením.
+- An adequately charged Acer Iconia A1-810, a reliable USB cable, Windows, a working MediaTek VCOM driver, and SP Flash Tool.
+- Your own verified backup of the original firmware and device-specific data, plus a verified recovery method. Never use another tablet's NVRAM or other device-specific partitions.
+- A matching scatter file, `boot.img`, and `system.img` for that specific tablet. Verify their SHA-256 hashes against a reliable manifest and compare the device's partition layout before use.
 
-Aktuální soukromá záloha se skládá z kopií boot a system; neobsahuje celý oddíl `/data`, osobní účet, nainstalované hry, jejich data ani případné aktualizace aplikací uložené v `/data`. Obrázek recovery je samostatná záloha, kterou při běžné obnově systému nevybírejte.
+The current private backup contains copies of boot and system. It does not contain the full `/data` partition, personal accounts, installed games, game data, or app updates stored in `/data`. The recovery image is a separate backup and should not be selected for a routine system restore.
 
-## Obnova pomocí SP Flash Tool
+## Restore with SP Flash Tool
 
-1. Spusťte SP Flash Tool a načtěte odpovídající scatter.
-2. Zrušte zaškrtnutí všech řádků. Vyberte pouze **BOOTIMG** s ověřeným `boot.img` a **ANDROID** s ověřeným `system.img`; před pokračováním znovu zkontrolujte, že nejsou vybrané další řádky.
-3. Použijte pouze **Download Only**, spusťte Download a připojte vypnutý tablet způsobem odpovídajícím používanému ovladači. Neodpojujte ho během zápisu. Počkejte na potvrzení nástroje.
-4. Odpojte tablet a spusťte jej. První spuštění může trvat déle. Přihlášení a data se řídí stavem existujícího oddílu `/data`.
+1. Open SP Flash Tool and load the matching scatter file.
+2. Uncheck every row. Select **only BOOTIMG** with the verified `boot.img` and **ANDROID** with the verified `system.img`. Double-check that no other rows are selected.
+3. Use **Download Only**, start Download, and connect the powered-off tablet using the procedure appropriate to your driver. Do not disconnect it while writing. Wait for the tool's confirmation.
+4. Disconnect and start the tablet. The first boot can take longer. Sign-in and user data depend on the existing `/data` partition.
 
-**Nepoužívejte Format ani Firmware Upgrade** a nevybírejte preloader, NVRAM, PROTECT, MBR ani EBR: nejde o součást tohoto postupu. Zelené potvrzení samo o sobě neprokazuje funkčnost Androidu po restartu.
+**Do not use Format or Firmware Upgrade.** Do not select preloader, NVRAM, PROTECT, MBR, or EBR; they are not part of this procedure. The green confirmation alone does not prove that Android boots successfully.
 
-## Známý stav
+## Known status
 
-Na jednom zkoušeném zařízení funguje grafická akcelerace, Wi‑Fi, Bluetooth (včetně přenosu souboru), reproduktor a mikrofon, otáčení obrazovky a obchod Play. Fotoaparát není zprovozněn; VPN nebyla ověřena. Po přihlášení Google může být tablet dočasně pomalý, než doběhne synchronizace a aktualizace.
+On one tested tablet, hardware graphics acceleration, Wi-Fi, Bluetooth file transfer, speaker, microphone, screen rotation, and the Play Store worked. The camera does not work yet; VPN has not been tested. The tablet may be temporarily slow after Google sign-in while synchronization and updates finish.
 
-Google služby jsou v konkrétním testovaném snímku systému již přítomné. Nejde o povolení k jejich veřejné distribuci. Veřejný návod na samostatnou instalaci Google služeb bude doplněn až s ověřeným a legálně dostupným balíčkem a postupem pro recovery.
+Google services are already present in the specific private system snapshot. This does not grant permission to distribute them publicly. Public instructions for installing Google services separately will be added only after an appropriate package and recovery procedure are verified and available for lawful distribution.

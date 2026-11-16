@@ -1,21 +1,21 @@
-# Android 7 pro Acer Iconia A1-810
+# Android 7 for Acer Iconia A1-810
 
-Experimentální port LineageOS 14.1 (Android 7.1.2) pro Acer Iconia A1-810. Tento repozitář obsahuje návrh veřejné stránky a instalační dokumentace; **neobsahuje vydanou ROM**.
+An experimental port of LineageOS 14.1 (Android 7.1.2) to the Acer Iconia A1-810. This repository contains the project website and installation documentation; **it does not contain a released ROM**.
 
-Stránka: [index.html](index.html) · [Návod k instalaci](NAVOD.md)
+[Project website](index.html) · [Installation guide](NAVOD.md)
 
-Na testovaném tabletu se podařilo rozběhnout Android, grafickou akceleraci, Wi‑Fi, zvuk, mikrofon, Bluetooth, snímač náklonu, Google služby a Obchod Play. Stažení a spuštění hry bylo vyzkoušeno. Fotoaparát zatím nefunguje, VPN nebyla ověřena. Jde o jednotlivé zkoušky na jednom zařízení, nikoli o plošnou záruku.
+Android, hardware graphics acceleration, Wi-Fi, audio, microphone, Bluetooth, the motion sensor, Google services, and the Play Store have been tested on one tablet. A game was downloaded and played. The camera does not work yet, and VPN has not been tested. These observations do not guarantee the same result on other devices.
 
-## Před zveřejněním
+## Before publishing a release
 
-- Ověřit skutečně přenositelný a obnovitelný instalační balíček na dalším zařízení. Stávající bitová záloha systému byla pořízena z konkrétního tabletu a její obnova nebyla otestována.
-- Nepublikovat osobní snímky oddílů, obsah `/data`, NVRAM, PROTECT, sériová čísla, MAC adresy ani uložené přístupové údaje.
-- Vyřešit práva a licence před šířením výrobcových binárek a Google aplikací. Google balíček nehostovat bez příslušného oprávnění.
-- Doplnit skutečný odkaz na ověřené vydání teprve po jeho přípravě. Uvést verzi, SHA-256 a přesný postup ověření.
-- Potvrdit funkční návrat ze zálohy a přesné podmínky pro další tablety, včetně rozložení oddílů a použitých ovladačů.
+- Verify a portable installation package and a successful restore on another device. The existing raw system snapshot was taken from one tablet and has not been restore-tested.
+- Never publish private partition dumps, `/data`, NVRAM, PROTECT, serial numbers, MAC addresses, or credentials.
+- Establish the rights and licenses for vendor binaries and Google applications before distributing them. Do not host Google packages without the necessary rights.
+- Add a real download link only after a release is prepared and verified. Include the version, SHA-256 hashes, and verification instructions.
+- Verify the restore procedure and conditions for other tablets, including partition layouts and drivers.
 
 ## GitHub Pages
 
-Obsah tohoto adresáře je připraven pro samostatný repozitář. Nahrajte ho jako kořen repozitáře a v jeho nastavení vyberte **Pages → Deploy from a branch**, větev obsahující soubory a adresář `/ (root)`. Web je statický a nepotřebuje sestavení. Přesné možnosti a dostupnost se řídí aktuálním nastavením GitHubu.
+This directory can be used as the root of a standalone repository. In repository settings choose **Pages → Deploy from a branch**, select the branch with these files, and choose `/ (root)`. The site is static and requires no build step.
 
-Stránka úmyslně neobsahuje tlačítko pro stažení ani darovací odkaz: vydání a cílové účty zatím nebyly ověřeny nebo zadány.
+The site has no download button yet because a public release has not been established. If you would like to support the project, you can [donate via PayPal](https://paypal.me/lovelyjohntrbn).
