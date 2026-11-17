@@ -4,6 +4,8 @@ An experimental port of LineageOS 14.1 (Android 7.1.2) to the Acer Iconia A1-810
 
 [Project website](index.html) · [Installation guide](NAVOD.md)
 
+The guide links to the historical **A1-810 Unlock and CWM** and SP Flash Tool procedure used as a reference when preparing the development device; its third-party downloads and suitability for other tablets have not been verified.
+
 Android, hardware graphics acceleration, Wi-Fi, audio, microphone, Bluetooth, the motion sensor, Google services, and the Play Store have been tested on one tablet. A game was downloaded and played. The camera does not work yet, and VPN has not been tested. These observations do not guarantee the same result on other devices.
 
 ## Before publishing a release

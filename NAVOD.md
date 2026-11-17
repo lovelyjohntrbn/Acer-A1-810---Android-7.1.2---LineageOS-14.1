@@ -8,6 +8,12 @@
 - Your own verified backup of the original firmware and device-specific data, plus a verified recovery method. Never use another tablet's NVRAM or other device-specific partitions.
 - A matching scatter file, `boot.img`, and `system.img` for that specific tablet. Verify their SHA-256 hashes against a reliable manifest and compare the device's partition layout before use.
 
+### Bootloader unlock, CWM and SP Flash Tool
+
+The development tablet was prepared using the **A1-810 Unlock and CWM** package and SP Flash Tool. An [archived English guide to the package and its unlocking procedure](https://chinagadgetsreviews.blogspot.com/2014/09/how-to-easily-unlock-bootloader-and.html) documents the original KitKat-era process and credits Fire Diamond and other contributors. The guide's third-party downloads have not been verified by this project; availability and compatibility with your tablet are not established.
+
+Unlocking and installing recovery are separate from restoring the boot and system images below. The historical guide describes writes to security-related areas and the preloader; a mistake can prevent boot or recovery. Make a device-specific backup first, verify your exact model and firmware, and do not select those partitions as part of the system restore.
+
 The current private backup contains copies of boot and system. It does not contain the full `/data` partition, personal accounts, installed games, game data, or app updates stored in `/data`. The recovery image is a separate backup and should not be selected for a routine system restore.
 
 ## Restore with SP Flash Tool
