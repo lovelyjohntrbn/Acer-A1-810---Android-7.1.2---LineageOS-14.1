@@ -1,6 +1,6 @@
 # Android 7 for Acer Iconia A1-810
 
-An experimental port of LineageOS 14.1 (Android 7.1.2) to the Acer Iconia A1-810. This repository contains the project website and installation documentation; **it does not contain a released ROM**.
+An experimental port of LineageOS 14.1 (Android 7.1.2) to the Acer Iconia A1-810. This repository contains the project website and installation documentation.
 
 [Project website](index.html) · [Installation guide](NAVOD.md)
 
