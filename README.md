@@ -1,11 +1,23 @@
-# Android 7 for Acer Iconia A1-810
+# LineageOS 14.1 for Acer Iconia A1-810
 
-An experimental port of LineageOS 14.1 (Android 7.1.2) to the Acer Iconia A1-810. This repository contains the project website and installation documentation.
+An unofficial Android 7.1.2 Nougat port for the Acer Iconia A1-810.
 
-[Project website](index.html) · [Installation guide](NAVOD.md)
+[GitHub Releases](https://github.com/lovelyjohntrbn/Acer-A1-810---Android-7.1.2---LineageOS-14.1/releases) · [1.1.0-beta release notes and installation guide](RELEASE-NOTES-1.1.0-beta.md) · [Project website](index.html)
 
-The guide links to the historical **A1-810 Unlock and CWM** and SP Flash Tool procedure used as a reference when preparing the development device; its third-party downloads and suitability for other tablets have not been verified.
+## What's new in 1.1.0-beta
 
-Android, hardware graphics acceleration, Wi-Fi, audio, microphone, Bluetooth, the motion sensor, Google services, and the Play Store have been tested on one tablet. A game was downloaded and played. The camera does not work yet, and VPN has not been tested. These observations do not guarantee the same result on other devices.
+- Both cameras support photos and video with sound. The front camera records at up to 640 × 480.
+- Wi-Fi scan results use corrected timestamps. The synthetic `NVRAM WARNING` entry is hidden from the network list.
+- A startup helper restarts SystemUI once to recover the navigation buttons and notification shade. The interface briefly disappears during the restart.
 
-If you would like to support the project, you can [donate via PayPal](https://paypal.me/lovelyjohntrbn).
+## Tested on the development tablet
+
+Hardware graphics acceleration, touch, screen rotation, Wi-Fi, Bluetooth file transfer, speaker, microphone, and both cameras work on one A1-810. The camera fixes were also tested after reboot. A clean install of the packaged images and compatibility with other tablets remain untested.
+
+## Installation
+
+Use the package for **Acer Iconia A1-810** with SP Flash Tool in **Download Only** mode. Back up your device and verify the SHA-256 checksum and partition layout before flashing. The [installation guide](RELEASE-NOTES-1.1.0-beta.md) covers the exact partition selections and links to the original unlock and recovery procedure.
+
+Google apps are installed separately. Play Protect certification remains unresolved, and VPN is untested.
+
+[Support development via PayPal](https://paypal.me/lovelyjohntrbn)
